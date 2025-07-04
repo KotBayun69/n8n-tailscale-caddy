@@ -16,7 +16,7 @@ An active Tailscale account. You will need to do following things additionally:
   
 ```sh
 mkdir -p ~/.config
-touch tsauthkey
+touch ~/.config/tsauthkey
 echo <YOUR_TS_AUTH_KEY> > tsauthkey
 
 ```
