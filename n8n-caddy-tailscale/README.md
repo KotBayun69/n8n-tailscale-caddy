@@ -12,7 +12,13 @@ Docker and Docker Compose installed on your system. You should also have public 
 An active Tailscale account. You will need to do following things additionally:
 - Enable [HTTPs](https://tailscale.com/kb/1153/enabling-https) and [MagicDNS](https://tailscale.com/kb/1081/magicdns) in Tailscale [DNS config](https://login.tailscale.com/admin/dns) 
 - [Add Auth Key](https://login.tailscale.com/admin/settings/keys)
-
+- Save the key in `~/.config/tsauthkey` file:
+  
+      ```
+      mkdir -p ~/.config
+      touch tsauthkey
+      echo <YOUR_TS_AUTH_KEY> > tsauthkey
+      ```
 
 ### 🚀 Problems This Setup Solves:
 - **Public exposure of n8n UI**: Many self-hosted n8n setups leave the admin panel exposed to the internet, increasing security risks.
