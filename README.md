@@ -27,7 +27,8 @@ cd n8n-caddy-tailscale/
 
 Copy `.env.example` to `.env`
 ```
-cp .env.example .env
+cp n8n/.env.example n8n/.env
+cp caddy/.env.example caddy/.env
 ```
 Edit `.env` to set up domains, Tailscale settings, and n8n configurations.
 
