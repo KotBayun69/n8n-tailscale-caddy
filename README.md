@@ -1,4 +1,4 @@
-# 🚀 Secure n8n Deployment with Caddy & Traefik
+# 🚀 Secure n8n Deployment with Caddy
 
 ## 🌟 Overview  
 
