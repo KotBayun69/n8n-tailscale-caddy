@@ -26,11 +26,13 @@ cd n8n-caddy-tailscale/
 ### 3️⃣ Configure environment variables
 
 Copy `.env.example` to `.env`
-```
+
+```sh
 cp n8n/.env.example n8n/.env
 cp caddy/.env.example caddy/.env
 ```
-Edit `.env` to set up domains, Tailscale settings, and n8n configurations.
+
+Edit `.env` files in both directories to set correct enviromental variables.
 
 ### 4️⃣ Deploy the setup  
 
