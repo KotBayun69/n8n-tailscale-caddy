@@ -14,12 +14,12 @@ An active Tailscale account. You will need to do following things additionally:
 - [Add Auth Key](https://login.tailscale.com/admin/settings/keys)
 - Save the key in `~/.config/tsauthkey` file:
   
-      ```sh
-      mkdir -p ~/.config
-      touch tsauthkey
-      echo <YOUR_TS_AUTH_KEY> > tsauthkey
-  
-      ```
+```sh
+mkdir -p ~/.config
+touch tsauthkey
+echo <YOUR_TS_AUTH_KEY> > tsauthkey
+
+```
 
 ### 🚀 Problems This Setup Solves:
 - **Public exposure of n8n UI**: Many self-hosted n8n setups leave the admin panel exposed to the internet, increasing security risks.
