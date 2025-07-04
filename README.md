@@ -2,11 +2,10 @@
 
 ## 🌟 Overview  
 
-This repository provides **two secure deployment templates** for **n8n** using:  
+This repository is a fork of [original repo](https://github.com/telepilotco/n8n-secure-deployment)"Secure n8n Deployment with Caddy & Traefik"  provides **secure deployment template** for **n8n** using:  
 - **Caddy** – Simple, automatic SSL and reverse proxy setup  
-- **Traefik** – Advanced, flexible reverse proxy with automatic SSL  
 
-Both setups are designed to:  
+Setup is designed to:  
 - ✅ **Expose only webhooks to the public internet**  
 - ✅ **Keep the n8n UI, login, and workflows private** using **Tailscale**  
 - ✅ **Automatically manage SSL certificates** via Let's Encrypt  
@@ -14,37 +13,25 @@ Both setups are designed to:
 
 ---
 
-## 🔥 Choosing the Right Setup  
-
-| Feature           | Caddy Template  | Traefik Template  |
-|------------------|----------------|------------------|
-| **Ease of Use**  | ✅ Very simple | ⚡ More flexible |
-| **Auto SSL**     | ✅ Built-in    | ✅ Built-in |
-| **Reverse Proxy** | ✅ Basic routing | ✅ Advanced routing & middleware |
-| **Tailscale Support** | ✅ Yes | ✅ Yes |
-
-- Use **Caddy** if you want a **quick & simple** setup.  
-- Use **Traefik** if you need **more control** over routing and middleware.  
-
----
-
 ## 🚀 Quick Start  
 
 ### 1️⃣ Clone the repository  
+
 ```sh
-git clone https://github.com/telepilotco/n8n-secure-deployment.git
-cd n8n-secure-deployment/
+git clone https://github.com/KotBayun69/n8n-tailscale-caddy.git
+cd n8n-caddy-tailscale/
 ```
 
-### 2️⃣ Choose a setup and navigate into the folder  
-```sh
-cd n8n-caddy-tailscale/   # or cd n8n-traefik-tailscale/
-```
+### 3️⃣ Configure environment variables
 
-### 3️⃣ Configure environment variables  
+Copy `.env.example` to `.env`
+```
+cp .env.example .env
+```
 Edit `.env` to set up domains, Tailscale settings, and n8n configurations.
 
 ### 4️⃣ Deploy the setup  
+
 ```sh
 sh start.sh
 ```
@@ -53,7 +40,7 @@ sh start.sh
 
 ## 📌 Summary  
 
-- ✅ **Secure n8n deployments with either Caddy or Traefik**  
+- ✅ **Secure n8n deployments with Caddy**  
 - ✅ **Public webhooks, private admin access via Tailscale**  
 - ✅ **Automatic SSL certificates with Let's Encrypt**  
 - ✅ **Docker-based setup for easy management**  
