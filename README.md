@@ -1,4 +1,4 @@
-# 🚀 Secure n8n Deployment with Caddy
+# 🚀 Secure n8n Deployment with Tailscale and Caddy
 
 ## 🌟 Overview  
 
