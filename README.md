@@ -3,7 +3,8 @@
 ## 🌟 Overview  
 
 This repository is a fork of [original repo](https://github.com/telepilotco/n8n-secure-deployment "Secure n8n Deployment with Caddy & Traefik")  provides **secure deployment template** for **n8n** using:  
-- **Caddy** – Simple, automatic SSL and reverse proxy setup  
+- **Caddy** – Simple, automatic SSL and reverse proxy setup
+- **Tailscale** - Best VPN Service for Secure Networks  
 
 Setup is designed to:  
 - ✅ **Expose only webhooks to the public internet**  
