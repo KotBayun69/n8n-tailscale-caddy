@@ -14,7 +14,7 @@ An active Tailscale account. You will need to do following things additionally:
 - [Add Auth Key](https://login.tailscale.com/admin/settings/keys)
 - Save the key in `~/.config/tsauthkey` file:
   
-      ```
+      ```sh
       mkdir -p ~/.config
       touch tsauthkey
       echo <YOUR_TS_AUTH_KEY> > tsauthkey
@@ -54,6 +54,7 @@ n8n-caddy-tailscale/
 ## 🚀 Quick Start
 
 ### 1️⃣ Clone this repository
+
 ```sh
 git clone https://github.com/telepilotco/n8n-secure-deployment.git
 cd n8n-secure-deployment/n8n-caddy-tailscale/
