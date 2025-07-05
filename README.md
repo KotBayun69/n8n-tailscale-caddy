@@ -45,7 +45,7 @@ sh start.sh
 ## 📌 Summary  
 
 - ✅ **Secure n8n deployments with Caddy**  
-- ✅ **Public webhooks, private admin access via Tailscale**  
+- ✅ **Public webhooks, admin access via Tailscale**  
 - ✅ **Automatic SSL certificates with Let's Encrypt**  
 - ✅ **Docker-based setup for easy management**  
 
