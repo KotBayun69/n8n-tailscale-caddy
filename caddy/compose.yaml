@@ -1,4 +1,5 @@
 ---
+
 services:
   caddy:
     build:
@@ -12,33 +13,19 @@ services:
       - CLOUDFLARE_EMAIL=${CF_EMAIL}
       - CLOUDFLARE_API_TOKEN=${CF_API_TOKEN}
       - ACME_AGREE=true
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
     volumes:
       - caddy_config:/config
       - caddy_data:/data
       - ./Caddyfile:/etc/caddy/Caddyfile
-      # - ./caddy/index.html:/usr/share/caddy/index.html
-    network_mode: service:tailscale
-
-  tailscale:
-    image: tailscale/tailscale:latest
-    container_name: ts-caddy
-    hostname: caddy
-    environment:
-      - TS_AUTHKEY=${TS_AUTHKEY}
-      - TS_STATE_DIR=/var/lib/tailscale
-      - TS_USERSPACE=false
-    volumes:
-      - ts_state:/var/lib/tailscale
-    devices:
-      - /dev/net/tun:/dev/net/tun
-    cap_add:
-      - net_admin
-    restart: unless-stopped
 
 volumes:
   caddy_data:
     name: caddy_data
+    external: true
   caddy_config:
     name: caddy_config
-  ts_state:
-    name: ts_state
+    external: true
