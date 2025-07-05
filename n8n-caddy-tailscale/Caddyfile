@@ -1,19 +1,15 @@
 {
-    email {$USER_EMAIL}
+	ocsp_stapling off
 }
 
-# Public Webhooks Only
-{$PUBLIC_DOMAIN} {
-    reverse_proxy /webhook* http://n8n:5678
-    reverse_proxy /webhook-test* http://n8n:5678
-
-    @block_non_webhooks {
-        not path /webhook* /webhook-test*
-    }
-    respond @block_non_webhooks "403 Forbidden" 403
+(cloudflare) {
+        tls {
+                dns cloudflare {env.CF_API_TOKEN}
+		resolvers 1.1.1.1 1.0.0.1
+        }
 }
 
-# Private Access via Tailscale
-{$TAILSCALE_DOMAIN} {
-    reverse_proxy http://n8n:5678
+n8n.psv-lab.online {
+	reverse_proxy {env.N8N_TS_IP}:5678
+	import cloudflare
 }
