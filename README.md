@@ -7,8 +7,8 @@ This repository is a fork of [original repo](https://github.com/telepilotco/n8n-
 - **Tailscale** - Best VPN Service for Secure Networks  
 
 Setup is designed to:  
-- ✅ **Expose only webhooks to the public internet**  
-- ✅ **Keep the n8n UI, login, and workflows private** using **Tailscale**  
+- ✅ **Expose webhooks to the public internet**  
+- ✅ **Manage access to n8n UI, login, and workflows** using **Tailscale**  
 - ✅ **Automatically manage SSL certificates** via Let's Encrypt  
 - ✅ **Use Docker Compose for easy deployment**  
 
