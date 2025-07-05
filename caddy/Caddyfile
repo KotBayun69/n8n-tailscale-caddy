@@ -1,15 +1,15 @@
 {
-        ocsp_stapling off
+	ocsp_stapling off
 }
 
 (cloudflare) {
         tls {
-                dns cloudflare <CLOUDFLARE_API_TOKEN>
-                resolvers 1.1.1.1 1.0.0.1
+                dns cloudflare {env.CF_API_TOKEN}
+		resolvers 1.1.1.1 1.0.0.1
         }
 }
 
-n8n.<YOUR_DOMAIN> {
-        reverse_proxy <n8n-instance-ip-on-tailnet>
-        import cloudflare
+n8n.{env.YOUR_DOMAIN} {
+	reverse_proxy {env.N8N_TS_IP}:5678
+	import cloudflare
 }
